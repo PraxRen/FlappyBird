@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Bird))]
-public class BirdCollisionHandler : MonoBehaviour
+public class CollisionHandler : MonoBehaviour
 {
     public event Action<IInteractable> CollisionDetected;
 

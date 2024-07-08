@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(BirdMover), typeof(ScoreCounter), typeof(BirdCollisionHandler))]
+[RequireComponent(typeof(BirdMover), typeof(ScoreCounter), typeof(CollisionHandler))]
 [RequireComponent(typeof(Fighter), typeof(Health))]
 public class Bird : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class Bird : MonoBehaviour
 
     private BirdMover _birdMover;
     private ScoreCounter _scoreCounter;
-    private BirdCollisionHandler _handler;
+    private CollisionHandler _handler;
     private Fighter _fighter;
     private Health _health;
 
@@ -19,7 +19,7 @@ public class Bird : MonoBehaviour
     private void Awake()
     {
         _scoreCounter = GetComponent<ScoreCounter>();
-        _handler = GetComponent<BirdCollisionHandler>();
+        _handler = GetComponent<CollisionHandler>();
         _birdMover = GetComponent<BirdMover>();
         _fighter = GetComponent<Fighter>();
         _health = GetComponent<Health>();
